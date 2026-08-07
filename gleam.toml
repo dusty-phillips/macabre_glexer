@@ -1,18 +1,14 @@
-name = "glexer"
+name = "macabre_glexer"
 version = "2.5.0"
-description = "A lexer for Gleam source code"
-licenses = ["MIT"]
-gleam = ">= 1.4.0"
-repository = { type = "github", user = "DanielleMaywood", repo = "glexer" }
+description = "A lexer for Gleam (macabre python-target port of glexer)"
 
-[javascript.deno]
-allow_read = true
+licences = ["MIT"]
+repository = { type = "github", user = "dusty-phillips", repo = "macabre_glexer" }
 
 [dependencies]
 gleam_stdlib = ">= 0.43.0 and < 2.0.0"
-splitter = ">= 1.1.0 and < 2.0.0"
+splitter = ">= 1.1.0 and < 2.0.0" # TODO: needs a macabre python-target port before macabre_glexer is usable
+macabre_stdlib = { git = "git@github.com:dusty-phillips/macabre_stdlib.git", ref = "main" }
 
 [dev-dependencies]
-gleeunit = "~> 1.1"
-simplifile = ">= 1.0.0 and < 3.0.0"
-gleamy_bench = ">= 0.6.0 and < 1.0.0"
+gleeunit = ">= 1.0.0 and < 2.0.0"

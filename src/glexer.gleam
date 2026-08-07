@@ -877,18 +877,15 @@ fn token(
 // FFI String functions //
 // //////////////////// //
 
-@external(javascript, "./glexer.ffi.mjs", "string_length")
-fn length(string: String) -> Int {
-  string.byte_size(string)
-}
+@external(python, "glexer_bindings", "length")
+fn length(string: String) -> Int
 
 /// > 🚨 Beware that this is tricking Gleam's type system! There's no guarantee
 /// > that taking a slice from an arbitrary byte index would result in a valid
 /// > UTF8 String. The way this function is used we should only ever take
 /// > valid slices though.
 ///
-@external(erlang, "binary", "part")
-@external(javascript, "./glexer.ffi.mjs", "slice_bytes")
+@external(python, "glexer_bindings", "slice_bytes")
 fn slice_bytes(string: String, from byte: Int, sized bytes: Int) -> String
 
 /// > 🚨 Beware that this is tricking Gleam's type system! There's no guarantee
@@ -897,6 +894,5 @@ fn slice_bytes(string: String, from byte: Int, sized bytes: Int) -> String
 /// > specific characters (like `\n` or `\"`) and know we're back to dealing
 /// > with a valid UTF8 string.
 ///
-@external(erlang, "glexer_ffi", "drop_byte")
-@external(javascript, "./glexer.ffi.mjs", "drop_byte")
+@external(python, "glexer_bindings", "drop_byte")
 fn drop_byte(string: String) -> String
