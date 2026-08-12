@@ -7,4 +7,4 @@ def slice_bytes(string, start, size):
 
 
 def drop_byte(string):
-    return string.encode("utf-8")[1:].decode("utf-8", "replace")
+    return string.encode("utf-8")[1:].decode("utf-8", "ignore")
