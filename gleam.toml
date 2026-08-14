@@ -6,9 +6,9 @@ licences = ["MIT"]
 repository = { type = "github", user = "dusty-phillips", repo = "macabre_glexer" }
 
 [dependencies]
-gleam_stdlib = ">= 0.43.0 and < 2.0.0"
-splitter = ">= 1.1.0 and < 2.0.0" # TODO: needs a macabre python-target port before macabre_glexer is usable
-macabre_stdlib = { git = "git@github.com:dusty-phillips/macabre_stdlib.git", ref = "main" }
+gleam_stdlib = { git = "git@github.com:dusty-phillips/macabre_stdlib.git", ref = "main" }
+splitter = { git = "git@github.com:dusty-phillips/macabre_splitter.git", ref = "main" }
 
 [dev-dependencies]
-gleeunit = ">= 1.0.0 and < 2.0.0"
+gleeunit = { git = "git@github.com:dusty-phillips/macabre_gleeunit.git", ref = "main" }
+simplifile = { git = "git@github.com:dusty-phillips/macabre_simplifile.git", ref = "main" }
