@@ -1,4 +1,4 @@
-name = "macabre_glexer"
+name = "glexer"
 version = "2.5.0"
 description = "A lexer for Gleam (macabre python-target port of glexer)"
 
